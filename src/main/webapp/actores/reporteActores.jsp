@@ -1,10 +1,11 @@
-<%--
+<%@ page import="com.example._20195527_20191417.beans.ActoresBean" %><%--
   Created by IntelliJ IDEA.
   User: CARLOS
   Date: 6/06/2022
   Time: 19:25
   To change this template use File | Settings | File Templates.
 --%>
+<jsp:useBean id="listaActores" scope="request" type="java.util.ArrayList<com.example._20195527_20191417.beans.ActoresBean>"/>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -19,14 +20,19 @@
             text-decoration: underline;
             margin-top: 20px;
         }
+
+        .cabecera{
+            align-content: center;
+            background-color: blue;
+        }
     </style>
 </head>
 <body>
     <div class="titulo h3"><b>Reporte de futuros actores POPCORN S.A.C</b></div>
     <div style="text-align: center;">
-        <table>
+        <table class="table table-striped" align="center">
             <thead>
-                <tr>
+                <tr class="cabecera">
                     <td>Id</td>
                     <td>Nombre</td>
                     <td>N° Categorias</td>
@@ -37,10 +43,12 @@
             <tbody>
                 <% for (ActoresBean actor: listaActores) {%>
                 <tr>
-                    <td><%=actor.getId()%></td>
+                    <td><%=actor.getID()%></td>
                     <td><%=actor.getNombre()%></td>
-
+                    <td><%=actor.getCantCategorias()%></td>
+                    <td><%=actor.getCantPeliculas()%></td>
                 </tr>
+                <% } %>
             </tbody>
         </table>
     </div>

@@ -5,10 +5,10 @@ import com.example._20195527_20191417.beans.ActoresBean;
 import java.sql.*;
 import java.util.ArrayList;
 
-public class problem1Dao {
+public class Problem1Dao {
     private String user= "root";
-    private String pass= "root";
-    private String url = "jdbc:mysql://localhost:3306/hr";
+    private String pass= "20195527";
+    private String url = "jdbc:mysql://localhost:3306/sakila";
 
     public ArrayList<ActoresBean> listar_ActoresVersa(){
         ArrayList<ActoresBean> listaActores= new ArrayList<ActoresBean>();
