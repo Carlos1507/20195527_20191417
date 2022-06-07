@@ -8,7 +8,7 @@ import java.util.Locale;
 
 public class ActoresDao {
     private String user= "root";
-    private String pass= "20195527";
+    private String pass= "root";
     private String url = "jdbc:mysql://localhost:3306/sakila";
 
     public ArrayList<ActoresBean> listar_ActoresVersa(){

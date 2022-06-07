@@ -7,7 +7,7 @@ import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import java.io.IOException;
 
-@WebServlet(name = "MostrarActoresServlet", value = "/MostrarActoresServlet")
+@WebServlet(name = "MostrarActoresServlet", urlPatterns = {"/MostrarActoresServlet", ""})
 public class MostrarActoresServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -21,4 +21,6 @@ public class MostrarActoresServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
+
+
 }
