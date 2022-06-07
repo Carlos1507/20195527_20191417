@@ -18,21 +18,39 @@
         .titulo{
             text-align: center;
             text-decoration: underline;
-            margin-top: 20px;
+            margin-top: 50px;
         }
-
-        .cabecera{
+        .table{
+            margin-top: 20px;
+            border-collapse: separate;
+        }
+        .cabeceraexter{
+            text-align: center;
+        }
+        .cabecerainterna{
             align-content: center;
-            background-color: blue;
+            background-color: #00008B;
+            color: #fff;
+            font-weight: bold;
+            align-items: center;
+        }
+        .id{
+            text-align: right;
+        }
+        .nombre{
+            text-align: left;
+        }
+        .categorias, .peliculas{
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <div class="titulo h3"><b>Reporte de futuros actores POPCORN S.A.C</b></div>
     <div style="text-align: center;">
-        <table class="table table-striped" align="center">
-            <thead>
-                <tr class="cabecera">
+        <table class="table table-striped container px-6 py-4" align="center">
+            <thead class="cabeceraexter">
+                <tr class="cabecerainterna">
                     <td>Id</td>
                     <td>Nombre</td>
                     <td>N° Categorias</td>
@@ -43,10 +61,10 @@
             <tbody>
                 <% for (ActoresBean actor: listaActores) {%>
                 <tr>
-                    <td><%=actor.getID()%></td>
-                    <td><%=actor.getNombre()%></td>
-                    <td><%=actor.getCantCategorias()%></td>
-                    <td><%=actor.getCantPeliculas()%></td>
+                    <td class="id"><%=actor.getID()%></td>
+                    <td class="nombre"><%=actor.getNombre()%></td>
+                    <td class="categorias"><%=actor.getCantCategorias()%></td>
+                    <td class="peliculas"><%=actor.getCantPeliculas()%></td>
                 </tr>
                 <% } %>
             </tbody>

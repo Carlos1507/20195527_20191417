@@ -25,7 +25,7 @@ public class ActoresDao {
                     actor.setNombre(rs.getString(2));
                     actor.setCantCategorias(rs.getInt(3));
                     actor.setCantPeliculas(rs.getInt(4));
-                    actor.setNombre(convertir_Nombres(actor.getNombre()));
+                    actor.setNombre(cambiarFormatoNombre(actor.getNombre()));
                     listaActores.add(actor);
                 }
             }
