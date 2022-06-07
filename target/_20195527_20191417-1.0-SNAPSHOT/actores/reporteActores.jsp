@@ -30,7 +30,7 @@
 <body>
     <div class="titulo h3"><b>Reporte de futuros actores POPCORN S.A.C</b></div>
     <div style="text-align: center;">
-        <table class="table table-striped" align="center">
+        <table class="table table-striped" align="center" width="100px">
             <thead>
                 <tr class="cabecera">
                     <td>Id</td>

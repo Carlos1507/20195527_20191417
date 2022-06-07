@@ -6,9 +6,9 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.Locale;
 
-public class problem1Dao {
+public class ActoresDao {
     private String user= "root";
-    private String pass= "root";
+    private String pass= "20195527";
     private String url = "jdbc:mysql://localhost:3306/sakila";
 
     public ArrayList<ActoresBean> listar_ActoresVersa(){
@@ -57,7 +57,7 @@ public class problem1Dao {
                 "order by `ID`";
         return sql;
     }
-    public String convertir_Nombres(String nombre){
+    public String cambiarFormatoNombre(String nombre){
         String[] a;
         a= nombre.split(" ");
         String x= a[0], y= a[1];
